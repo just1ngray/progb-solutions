@@ -1,2 +1,2 @@
-# icpc-solutions
-Solutions to ICPC Problems
+# progb-solutions
+Solutions to PROGramming proBlems.
