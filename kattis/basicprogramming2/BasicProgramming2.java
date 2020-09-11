@@ -109,11 +109,12 @@ public class BasicProgramming2 {
     }
 
     private static void printRange(ArrayList<Integer> array, int min, int max) {
+        StringBuilder sb = new StringBuilder();
         array.stream()
             .sorted()
             .filter(n -> n >= min && n <= max)
-            .forEach(n -> System.out.print(n + " "));
-        System.out.println();
+            .forEach(n -> sb.append(n + " "));
+        System.out.println(sb);
     }
 
 }
