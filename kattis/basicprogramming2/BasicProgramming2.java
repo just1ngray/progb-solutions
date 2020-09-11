@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
+import java.util.Set;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.Map;
@@ -49,13 +49,13 @@ public class BasicProgramming2 {
         int max = Collections.max(array);
         int min = target - max;
 
-        List<Integer> subset = array.stream()
+        Set<Integer> subset = array.stream()
             .filter(n -> n <= target && n >= min)
-            .collect(Collectors.toList());
+            .collect(Collectors.toSet());
 
-        for (int i = 0; i < subset.size(); i ++) {
-            for (int j = 0; j < i; j ++) {
-                if (subset.get(i) + subset.get(j) == target) {
+        for (int n : subset) {
+            for (int x : subset) {
+                if (n != x && n + x == target) {
                     System.out.println("Yes");
                     return;
                 }
